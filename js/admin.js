@@ -32,7 +32,14 @@ product = JSON.parse(localStorage.getItem('product'))
 let deleteButton = document.querySelector('.delete')
 
 //---------------------------------------------------------------------------------------------------------------------
+function remove(position ){
+    // alert('button clicked')
+    product.splice(position,1)
+    storage()
+    upload()
+}
 
+//--------------------------------------------------------------------------------------------------------------------
 let table = document.querySelector('table')
 
 //the window.onload() is an event handler , not an event listener
